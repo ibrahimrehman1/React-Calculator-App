@@ -56,26 +56,25 @@ class App extends Component {
   }
 
   render(){
-    let value = "25%";
     return (
       <main className="main-div">
         <div className="container">
-          <Input onChange={this.change} value={this.state.currentValue} style={{borderBottom: "1px solid rgba(63, 81, 181, 0.5)", width: "100%", marginBottom: "10px"}}/>
+          <Input onChange={this.change} value={this.state.currentValue} style={{borderBottom: "1px solid rgba(63, 81, 181, 0.5)", width: "100%", margin: "6px"}}/>
           <br />
             
             {["7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", ".", "0", "Ans", "+"].map((obj, index)=>{
               if (obj !== "Ans"){
                 return(
                 <React.Fragment key={index}>
-                  <Button type="button" variant="outlined" color="primary" style={{fontWeight: "bolder", width: value, margin: ".01px"}} onClick={this.change}>{obj}</Button>
+                  <Button type="button" variant="outlined" color="primary" style={{fontWeight: "bolder", margin: "6px"}} onClick={this.change}>{obj}</Button>
                   {(obj === "/" || obj === "*" || obj === "-" || obj === "+") ? <br /> : null}
                 </React.Fragment>
               )
             }else{
-                return(<Button key={index} type="button" variant="outlined" color="primary" style={{fontWeight: "bolder", minWidth: value, margin: ".01px"}} onClick={this.giveAnswer}>{obj}</Button>)
+                return(<Button key={index} type="button" variant="outlined" color="primary" style={{fontWeight: "bolder", margin: "6px"}} onClick={this.giveAnswer}>{obj}</Button>)
             }
               })}
-            <Button type="button" variant="outlined" color="primary" style={{fontWeight: "bolder", width: "100%", margin: ".01px"}} onClick={()=> this.setState({currentValue: ""})}>Reset</Button>
+            <Button type="button" variant="outlined" color="primary" style={{fontWeight: "bolder", margin: "6px"}} onClick={()=> this.setState({currentValue: ""})}>Reset</Button>
         </div>
       </main>
     );

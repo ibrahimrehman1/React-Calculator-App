@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/build
+/React Calculator App
 /.firebase
 .firebasesrc
 /.pnp

@@ -28,13 +28,13 @@ code {
 
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 350px){
   button.MuiButtonBase-root{
-    width: 50% !important;
+    width: 45% !important;
   }
 }
 
-@media screen and (max-width: 200px){
+@media screen and (max-width: 300px){
   button.MuiButtonBase-root{
     width: 100% !important;
   }
