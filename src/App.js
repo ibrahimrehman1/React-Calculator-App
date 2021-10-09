@@ -4,12 +4,13 @@ import {Button, Input} from "@material-ui/core"
 
 const App = () => {
   const [currentValue, setCurrentValue] = useState('');
+  const [arr, setArr] = useState(["+", "-", "*", "/"]);
 
   const change = (event) => {
     let state = false;
       let value = null;
       if (event.target.value){
-        if (event.target.value.length < this.state.currentValue.length) {
+        if (event.target.value.length < currentValue.length) {
           setCurrentValue(event.target.value >= 1 ? currentValue.slice(0, currentValue.length - 1) : '');
           return
         }
@@ -24,14 +25,14 @@ const App = () => {
         value = event.target.value[event.target.value.split("").length - 1];
       }
       if (value === "+" || value === "-" || value === "*" || value === "/"){
-        for (let i in this.arr){
-          state = currentValue.endsWith(this.arr[i]);
+        for (let i in arr){
+          state = currentValue.endsWith(arr[i]);
           if (state){
             break;
           }
         }
       }
-    if ((+value || this.state.currentValue || value === ".") && state === false) {
+    if ((+value || currentValue || value === ".") && state === false) {
       setCurrentValue(currentValue.concat(value));
       }
   }
