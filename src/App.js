@@ -48,10 +48,14 @@ class App extends Component {
 
   giveAnswer(){
     if (this.state.currentValue){
-      let ans = String(eval(this.state.currentValue));
-      this.setState({
+      try {
+        let ans = String(eval(this.state.currentValue));
+        this.setState({
         currentValue: ans === "0" ? "" : ans,
       })
+    } catch {
+      alert("Invalid input..Please check your input values!!");
+    }
     }
   }
 
