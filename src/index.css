@@ -13,21 +13,6 @@ code {
 }
 
 
-.main-div{
-  text-align: center;
-
-}
-
-.container{
-  padding: 20px;
-  border: 1px solid rgba(63, 81, 181, 0.5) ;
-  display: inline-block;
-  position: relative;
-  top: 100px;
-  border-radius: 30px;
-
-}
-
 @media screen and (max-width: 350px){
   button.MuiButtonBase-root{
     width: 45% !important;
