@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {Button, Input} from "@material-ui/core"
+import Button from '@mui/material/Button';
+import Input from '@mui/material/Input';
 
 
 const App = () => {
